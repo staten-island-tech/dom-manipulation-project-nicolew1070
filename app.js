@@ -1,5 +1,5 @@
 DOMselectors = {
     form: document.querySelector("#form"),
-    firstName: document.querySelector(""),
+    firstName: document.querySelector("firstName"),
 
 }
