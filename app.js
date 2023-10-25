@@ -10,3 +10,4 @@ DOMSelectors.form.addEventListener("submit", function (event) {
     (header) => (header.textContent = DOMSelectors.firstName.value));
     }
 );
+
