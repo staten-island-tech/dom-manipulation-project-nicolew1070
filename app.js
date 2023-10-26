@@ -2,20 +2,21 @@ const DOMSelectors = {
     form: document.querySelector("#form"),
     name: document.querySelector(".pok-name"),
     type: document.querySelector(".pok-type"),
-    gen: document.querySelector(".pok-gen"),
     url: document.querySelector(".url"),
 }
 
-DOMSelectors.form.addEventListener("submit", function (event) {
-    event.preventDefault(),
-    DOMSelectors.querySelector(".display").insertAdjacentHTML(
-    "beforeend",
-    `<div class="display-card"> 
-    <h2>${DOMSelectors.name.value}</h2> 
-    <h3>${DOMSelectors.type.value}</h3> 
-    <h3>${DOMSelectors.gen.value}</h3> 
-    <img class="display-img" src="${DOMSelectors.url.value}" alt=""> 
-    <button class="remove-bn">Remove Pokemon</button> </div>`
-    )
-});
+function addCard(DOMSelectors) {
+    document.querySelector(".display").insertAdjacentHTML(
+        "beforeend",
+        `<div class="display-card"> 
+        <h2>${DOMSelectors.name.value}</h2> 
+        <h3>${DOMSelectors.type.value}</h3>  
+        <img class="display-img" src="${DOMSelectors.url.value}" alt=""> 
+        <button class="remove-bn">Remove Pokemon</button> </div>`
+        );
+}
 
+DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    addCard(DOMSelectors);
+});
