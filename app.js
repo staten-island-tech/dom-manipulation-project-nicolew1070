@@ -1,13 +1,21 @@
-DOMSelectors = {
+const DOMSelectors = {
     form: document.querySelector("#form"),
-    firstName: document.querySelector(".first-name"),
-    h2s: document.querySelector("h2"),
-};
+    name: document.querySelector(".pok-name"),
+    type: document.querySelector(".pok-type"),
+    gen: document.querySelector(".pok-gen"),
+    url: document.querySelector(".url"),
+}
 
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault(),
-    DOMSelectors.h2s.forEach(
-    (header) => (header.textContent = DOMSelectors.firstName.value));
-    }
-);
+    DOMSelectors.querySelector(".display").insertAdjacentHTML(
+    "beforeend",
+    `<div class="display-card"> 
+    <h2>${DOMSelectors.name.value}</h2> 
+    <h3>${DOMSelectors.type.value}</h3> 
+    <h3>${DOMSelectors.gen.value}</h3> 
+    <img class="display-img" src="${DOMSelectors.url.value}" alt=""> 
+    <button class="remove-bn">Remove Pokemon</button> </div>`
+    )
+});
 

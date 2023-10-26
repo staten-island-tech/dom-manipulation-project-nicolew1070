@@ -6,27 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>favorite pokemon(s)</h1>
-    <form action="">
+    <h1>Favorite Pokemons</h1>
+    <form action="" id="form">
     <div>
-        <label for="pok-name">pokemon name</label>
-        <input type="text" name="pok-name" id="pok-name"/>
+        <label for="pok-name">Pokemon Name</label>
+        <input type="text" name="pok-name" class="pok-name"/>
     </div>
     <div>
-        <label for="pok-type">pokemon type</label>
-        <input type="text" name="pok-type" id="pok-type">
+        <label for="pok-type">Pokemon Type</label>
+        <input type="text" name="pok-type" class="pok-type">
     </div>
     <div>
-        <label for="pok-gen">pokemon gen</label>
-        <input type="text" name="pok-gen" id="pok-gen">
-        <input type="submit" value="submit"/>
+        <label for="pok-gen">Pokemon Gen</label>
+        <input type="text" name="pok-gen" class="pok-gen">
     </div>
-    <div class="display-card">
-        <h2>squirtle</h2>
-        <h3>water</h3>
-        <h3>1st gen</h3>
+    <div>
+        <label for="pok-img">Enter Pokemon Image</label>
+        <input type="text" name="pok-gen" class="url">
+        <input type="submit" value="Submit"/>
+    </div>
+
+    <div class="display">
+   <!--  <div class="display-card">
+        <h2>Squirtle</h2>
+        <h3>Water</h3>
+        <h3>1st Gen</h3>
         <img class="display-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="">
-    </div>
+        <button class="remove-bn">Remove Pokemon</button>
+    </div> -->
+</div>
+
     </form>
     <script src="dom.js"></script>
 </body>

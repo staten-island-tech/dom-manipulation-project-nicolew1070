@@ -1,7 +1,35 @@
+body,
+html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    
+}
 
 .display-card {
+    width: 23%;
+    background-color: #b7e4c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.display {
+display: flex;
+flex-wrap: wrap;
+width: 92vw;
+margin: 1rem auto;
+align-items: center;
+justify-content: space-between;
 }
 
 .display-img{
-    width: 10%;
+    width: 50%;
 }
