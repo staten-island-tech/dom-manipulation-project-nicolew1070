@@ -5,18 +5,24 @@ const DOMSelectors = {
     url: document.querySelector(".url"),
 }
 
-function addCard(DOMSelectors) {
+function card (pokemon) {
     document.querySelector(".display").insertAdjacentHTML(
         "beforeend",
         `<div class="display-card"> 
-        <h2>${DOMSelectors.name.value}</h2> 
-        <h3>${DOMSelectors.type.value}</h3>  
-        <img class="display-img" src="${DOMSelectors.url.value}" alt=""> 
+        <h2>${pokemon.name.value}</h2> 
+        <h3>${pokemon.type.value}</h3>  
+        <img class="display-img" src="${pokemon.url.value}" alt=""> 
         <button class="remove-bn">Remove Pokemon</button> </div>`
         );
 }
 
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-    addCard(DOMSelectors);
+    card(DOMSelectors);
 });
+
+function removebutton () {
+    let buttons = document.querySelectorAll(".remove-bn");
+    console.log(buttons);
+}
+removebutton();
