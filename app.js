@@ -23,6 +23,9 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 
 function removebutton () {
     let buttons = document.querySelectorAll(".remove-bn");
-    console.log(buttons);
+    buttons.forEach((btn)=>btn.addEventListener("click", function (event) {
+        console.log();
+    })
+);
 }
 removebutton();
