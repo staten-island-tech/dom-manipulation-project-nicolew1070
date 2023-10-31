@@ -16,16 +16,24 @@ function card (pokemon) {
         );
 }
 
-DOMSelectors.form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    card(DOMSelectors);
-});
+function clearfields () {
+    DOMSelectors.name.value = "";
+    DOMSelectors.type.value = "";
+    DOMSelectors.url.value = "";
+}
 
 function removebutton () {
     let buttons = document.querySelectorAll(".remove-bn");
-    buttons.forEach((btn)=>btn.addEventListener("click", function (event) {
-        console.log();
+    buttons.forEach((buttons)=>buttons.addEventListener("click", function (event) {
+        buttons.parentElement.remove();
     })
 );
 }
-removebutton();
+
+
+DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    card(DOMSelectors);
+    clearfields();
+    removebutton();
+});
